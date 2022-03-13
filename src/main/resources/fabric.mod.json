@@ -13,7 +13,7 @@
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
 
-  "license": "Mozilla Public License 2.0",
+  "license": "Mozilla Public License Version 2.0",
   "icon": "assets/zeasin/icon.png",
 
   "environment": "*",
