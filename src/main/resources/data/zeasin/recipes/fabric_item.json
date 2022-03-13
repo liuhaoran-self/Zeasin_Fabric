@@ -1,9 +1,0 @@
-{
-    "type": "minecraft:smelting",
-    "ingredient": {
-      "item": "minecraft:amethyst_shard"
-    },
-    "result": "zeasin:fabric_item",
-    "experience": 15,
-    "cookingtime": 200
-}

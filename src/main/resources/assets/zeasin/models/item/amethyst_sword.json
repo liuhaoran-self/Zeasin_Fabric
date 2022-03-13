@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-      "layer0": "zeasin:item/fabric_sword"
+      "layer0": "zeasin:item/amethyst_sword"
     }
   }

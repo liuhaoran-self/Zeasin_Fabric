@@ -1,6 +1,9 @@
 {
-    "item.zeasin.fabric_item": "Fabric Item",
-    "item.zeasin.fabric_sword": "Fabric Sword",
-    "block.zeasin.fabric_block": "Fabric Block",
-    "itemGroup.fabric.example": "Fabric Example ItemGroup"
+    "block.zeasin.amethyst_container": "Amethyst Container",
+    "item.zeasin.amethyst_sword": "Amethyst Sword",
+    "item.zeasin.amethyst_helmet": "Amethyst Helmet",
+    "item.zeasin.amethyst_chestplate": "Amethyst Chestplate",
+    "item.zeasin.amethyst_leggings": "Amethyst Leggings",
+    "item.zeasin.amethyst_boots": "Amethyst Boots",
+    "itemGroup.amethyst.tech": "Amethyst Tech"
 }
