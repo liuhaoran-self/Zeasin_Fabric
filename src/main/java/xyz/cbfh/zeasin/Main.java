@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
@@ -15,6 +14,8 @@ import net.minecraft.util.registry.Registry;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import xyz.cbfh.zeasin.materials.AmethystArmor;
+import xyz.cbfh.zeasin.materials.AmethystTool;
 
 public class Main implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -25,7 +26,7 @@ public class Main implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
 	public static final Block AMETHYST_CONTAINER = new AmethystContainer(FabricBlockSettings.of(Material.AMETHYST));
 	public static final ItemGroup AMETHYST_TECH_GROUP = FabricItemGroupBuilder.build(new Identifier("amethyst", "tech"), () -> new ItemStack(Items.AMETHYST_SHARD));
-	public static final ArmorMaterial AMETHYST_ARMOR = new AmethystMaterial();
+	public static final ArmorMaterial AMETHYST_ARMOR = new AmethystArmor();
 
 	@Override
 	public void onInitialize() {
@@ -35,7 +36,7 @@ public class Main implements ModInitializer {
 		AMETHYST_CONTAINER_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "zeasin:amethyst_container_entity", FabricBlockEntityTypeBuilder.create(AmethystContainerEntity::new, AMETHYST_CONTAINER).build(null));
 		Registry.register(Registry.BLOCK, new Identifier(MODID, "amethyst_container"), AMETHYST_CONTAINER);//注册方块
 		Registry.register(Registry.ITEM, new Identifier(MODID, "amethyst_container"), new BlockItem(AMETHYST_CONTAINER, new Item.Settings().group(AMETHYST_TECH_GROUP)));//将方块注册到ItemGroup中
-		Registry.register(Registry.ITEM, new Identifier(MODID, "amethyst_sword"), new SwordItem(new AmethystMaterial(), 3, -2.5f, new Item.Settings().group(Main.AMETHYST_TECH_GROUP)));
+		Registry.register(Registry.ITEM, new Identifier(MODID, "amethyst_sword"), new SwordItem(new AmethystTool(), 3, -2.5f, new Item.Settings().group(Main.AMETHYST_TECH_GROUP)));
 		Registry.register(Registry.ITEM, new Identifier(MODID, "amethyst_helmet"), new BaseArmor(AMETHYST_ARMOR, EquipmentSlot.HEAD));
 		Registry.register(Registry.ITEM, new Identifier(MODID, "amethyst_chestplate"), new BaseArmor(AMETHYST_ARMOR, EquipmentSlot.CHEST));
 		Registry.register(Registry.ITEM, new Identifier(MODID, "amethyst_leggings"), new BaseArmor(AMETHYST_ARMOR, EquipmentSlot.LEGS));
